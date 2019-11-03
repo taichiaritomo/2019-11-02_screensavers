@@ -7,7 +7,6 @@ var request; // this variable stores the "animation frame request"
 var i = 0;
 
 var screensaverText = document.querySelector('.screensaver span');
-screensaverText.innerHTML = "&nbsp;".repeat(163);
 
 // this is our drawing function. it can be named anything, but i called it "draw"
 function draw() {
@@ -25,12 +24,11 @@ function draw() {
   var seconds = now.getSeconds();
 
   var space = "&nbsp;";
-  var string = space.repeat(seconds) + "seconds" + space.repeat(minutes) + "minutes" + space.repeat(hours) + "hours";
+  var string = space.repeat(seconds) + "seconds," + space.repeat(minutes) + "minutes," + space.repeat(hours) + "hours.";
   screensaverText.innerHTML = string;
 }
 
 draw();
-
 
 function adjust() {
   var fontsize = 2;
@@ -41,4 +39,5 @@ function adjust() {
   screensaverText.style.fontSize = (fontsize - 0.1) + 'px';
 }
 
+screensaverText.innerHTML = "&nbsp;".repeat(166);
 adjust();
