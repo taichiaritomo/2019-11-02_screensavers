@@ -1,0 +1,54 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: DarkTurquoise;
+  font-size: 64px;
+  text-align: center;
+}
+
+/* Make the screensaver take up the whole page */
+.screensaver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* center the contents */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 0.5s linear;
+}
+
+.screensaver.hidden {
+  opacity: 0;
+}
+
+.screensaver.visible {
+  opacity: 1;
+}
+
+p {
+  color: white;
+  padding: 1em;
+}
+
+p.small {
+  font-size: 32px;
+}
+
+p.medium {
+  font-size: 64px;
+}
+
+p.big {
+  font-size: 128px;
+}

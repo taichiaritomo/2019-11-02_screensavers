@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  /* background: rgb(10, 14, 32); */
+  /* sunset :) */
+  /* background: linear-gradient(to top, rgb(255, 163, 97) 0%, rgb(76, 60, 92) 50%, rgb(10, 14, 32) 100%); */
+}
+
+.fly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  filter: blur(8px);
+  animation:
+    lightup 3s infinite linear;
+    /* bounce-x 5s 3 alternate; */
+    /* bounce-y 5s infinite alternate linear; */
+}
+
+/*
+Animation for firefly lighting up
+CSS keyframe animation syntax - https://css-tricks.com/snippets/css/keyframe-animation-syntax/
+*/
+@keyframes lightup {
+  0% {
+    background-color: black;
+  }
+  5% {
+    background-color: yellow;
+  }
+  10% {
+    background-color: yellow;
+  }
+  15% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes bounce-x {
+  0% {
+    left: 0;
+  }
+  100% {
+    /* subtract 15px for the width of the bouncing element */
+    left: calc(100vw - 15px);
+  }
+}
+
+@keyframes bounce-y {
+  0% {
+    top: 0;
+  }
+  100% {
+    /* subtract 15px for the width of the bouncing element */
+    top: calc(100vh - 15px);
+  }
+}
+
+

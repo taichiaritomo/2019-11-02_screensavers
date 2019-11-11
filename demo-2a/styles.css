@@ -1,0 +1,41 @@
+html {
+  background: #000000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  /* center the contents */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: 50% 50%;
+  font-size: 64px;
+  text-align: center;
+}
+
+p {
+  color: white;
+  padding: 1em;
+}
+
+p.small {
+  font-size: 8px;
+}
+
+p.medium {
+  font-size: 64px;
+}
+
+p.big {
+  font-size: 128px;
+}
