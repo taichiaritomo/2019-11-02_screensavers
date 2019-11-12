@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('parking-lot.jpg');
+  background-size: cover;
+}
+
+.bag {
+  position: absolute;
+
+  /* appearance */
+  width: 7em;
+  opacity: 0.8;
+
+  /* animation */
+  animation-name: drift;
+  animation-duration: 42s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate; 
+}
+
+/* animation keyframes for bag drifting */
+@keyframes drift {
+  0% {
+    top: 72vh;
+    left: 39vw;
+    transform: rotate(2deg);
+  }
+  10% {
+    top: 79vh;
+    left: 52vw;
+    transform: rotate(102deg);
+  }
+  20% {
+    top: 58vh;
+    left: 82vw;
+    transform: rotate(241deg);
+  }
+  30% {
+    top: 42vh;
+    left: 36vw;
+    transform: rotate(48deg);
+  }
+  50% {
+    top: 75vh;
+    left: 5vw;
+    transform: rotate(126deg);
+  }
+  70% {
+    top: 63vh;
+    left: 92vw;
+    transform: rotate(508deg);
+  }
+  100% {
+    top: 84vh;
+    left: 21vw;
+    transform: rotate(126deg);
+  }
+}

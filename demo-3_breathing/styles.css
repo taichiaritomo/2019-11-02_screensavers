@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, #ffa361 0%, #4c3c5c 60%, #0a0e20 100%);
+}
+
+.firefly {
+  /* center horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* appearance */
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0 0 18px 20px black;
+
+  /* animation */
+  animation-name: glow;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+/* animation keyframes for firefly glow */
+@keyframes glow {
+  0% {
+    background-color: black;
+    box-shadow: 0 0 18px 20px black;
+  }
+  25% {
+    background-color: yellow;
+    box-shadow: 0 0 24px 32px yellow;
+  }
+  35% {
+    background-color: yellow;
+    box-shadow: 0 0 24px 32px yellow;
+  }
+  60% {
+    background-color: black;
+    box-shadow: 0 0 18px 20px black;
+  }
+  100% {
+    background-color: black;
+    box-shadow: 0 0 18px 20px black;
+  }
+}

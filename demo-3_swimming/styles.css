@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fish {
+  position: absolute;
+  background-image: url('fish.png');
+  width: 165px;
+  height: 99px;
+
+  animation-name: swim-with-turning;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.fish.dad {
+  background-size: contain;
+  background-image: url('slightly-more-realistic-fish.png');
+}
+
+@keyframes swim-with-turning {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  40% {
+    /* subtract the width of the fish so that it stops when it hits the edge */
+    left: calc(100vw - 165px);
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100vw - 165px);
+    transform: scaleX(-1);
+  }
+  90% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
